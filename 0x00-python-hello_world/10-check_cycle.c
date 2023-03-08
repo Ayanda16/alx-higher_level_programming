@@ -14,7 +14,6 @@ int check_cycle(listint_t *list)
 
 	if (list == NULL || list->next == NULL)
 	{
-		printf(" ");
 		return (0);
 	}
 
@@ -24,7 +23,6 @@ int check_cycle(listint_t *list)
 	{
 		if (slow == fast->next)
 		{
-			printf(" ");
 			return (1);
 		}
 

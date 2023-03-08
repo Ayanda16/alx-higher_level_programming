@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 
 	if (list == NULL || list->next == NULL)
 	{
-		printf("list has no loop\n");
+		printf(" ");
 		return (0);
 	}
 
@@ -22,13 +22,15 @@ int check_cycle(listint_t *list)
 	fast = list->next->next;
 	while (slow && fast && fast->next)
 	{
-		slow = slow->next;
-		fast  = fast->next->next;
-		if (slow == fast)
+		if (slow == fast->next)
 		{
-			printf("Linked List contains a loop\n");
+			printf(" ");
 			return (1);
 		}
+
+		slow = slow->next;
+		fast = fast->next->next;
+
 	}
 	return (0);
 }

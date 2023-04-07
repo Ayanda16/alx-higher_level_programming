@@ -1,36 +1,36 @@
-#!/usr/bin/python3
-""" Define an area and perimeter of a rectangle"""
+#!/usr/bin/bash
+"""define a rectangle"""
 
 
-class Rectangle():
-    """Defining a class rectangle"""
+class Rectangle:
+    """ defining class rectangle"""
     def __init__(self, width=0, height=0):
-        """ initialising a rectagle"""
+        """initialise rectangle"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """retrieve the width of a rectangle"""
+        """retrieve the width"""
         return self.__width
+
+    @property
+    def height(self):
+        """retrieve the height of the triangle"""
+        return self.__height
 
     @width.setter
     def width(self, value):
-        """setting width properties"""
+        """set width properties"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @property
-    def height(self):
-        """retrieve the height of the rectangle"""
-        return self.__height
-
     @height.setter
     def height(self, value):
-        """setting height properties"""
+        """set height properties"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -38,13 +38,22 @@ class Rectangle():
         self.__height = value
 
     def area(self):
-        """ returns the rectangle area"""
+        """returns the rectangle area"""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """ return the rectangle perimeter"""
+        """return the rectangle parametere"""
         if self.__width == 0 or self.__height == 0:
-            return 0
+            return (0)
         else:
-            return(2 * (self.__width + self.__height))
+            return ((self.__width + self.__height)*2)
+
+    def __str__(self):
+        """string representation of a rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return (" ")
+
+        for i in range(1, self.__width + 1):
+            for j in range(1, self.__height + 1):
+                print("#\n", end="")
 

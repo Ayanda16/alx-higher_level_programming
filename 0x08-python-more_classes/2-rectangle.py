@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-""" Define n area and perimeter of a rectagle"""
+""" Define an area and perimeter of a rectangle"""
 
 
-class Rectagle:
-    """ Defining a class rectangle"""
+class Rectangle():
+    """Defining a class rectangle"""
     def __init__(self, width=0, height=0):
         """ initialising a rectagle"""
-    self.width = width
-    self.height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -39,7 +39,7 @@ class Rectagle:
 
     def area(self):
         """ returns the rectangle area"""
-        return (self._width * self._height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """ return the rectangle perimeter"""

@@ -62,5 +62,6 @@ class Rectangle:
 
     def __repr__(self):
         """create a representation"""
-        new_rectangle ="{}({}, {})".format(self.__class__.__name__, self.__width, self.__height)
+        new_rectangle = "{}({}, {})".format(self.__class__.__name__,
+                                            self.__width, self.__height)
         return (new_rectangle)

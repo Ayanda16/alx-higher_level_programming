@@ -6,7 +6,6 @@
 
 def is_kind_of_class(obj, a_class):
     """returns true/false based on wheather the object is of given type"""
-    if not isinstance(obj, a_class):
-        return False
-    else:
-        True
+    if isinstance(obj, a_class):
+        return True
+    return False

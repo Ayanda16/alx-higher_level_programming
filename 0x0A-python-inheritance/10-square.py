@@ -5,7 +5,6 @@
 Rectangle = __import__('9-rectangle'). Rectangle
 
 
-
 class Square(Rectangle):
     """ class square inherited from class rectangle"""
 
@@ -15,7 +14,7 @@ class Square(Rectangle):
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
-    
+
     def area(self):
         """define area of class square"""
         return (self.__size ** 2)

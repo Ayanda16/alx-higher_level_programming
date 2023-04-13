@@ -24,5 +24,5 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """ initialisation of class Rectangle"""
 
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height

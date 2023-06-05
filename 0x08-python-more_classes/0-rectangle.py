@@ -3,4 +3,4 @@
 
 
 class Rectangle:
-    "represents a rectangle"""
+    """represents a rectangle"""

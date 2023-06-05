@@ -52,11 +52,11 @@ class Rectangle:
     def __str__(self):
         """"magic method to return rectangle with # representation"""
         if self.__width == 0 or self.__height == 0:
-            return("")
+            return ("")
 
-        rectangle = []
-        for i in range(self.__height):
-            [rectangle.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                rectangle.append("\n")
-            return("".join(rectangle))
+        rectangle = ""
+        for i in range(self.height - 1):
+            rectangle += "#" * self.width + "\n"
+        rectangle += "#" * self.width
+        return (rectangle)
+        

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Exact same object"""
+"""fuction that defines exact same object"""
 
 
 def is_same_class(obj, a_class):
@@ -8,5 +8,5 @@ def is_same_class(obj, a_class):
     of the specified class otherwise false"""
     if type(obj) == a_class:
         return True
-    else
-    return False
+    else:
+        return False

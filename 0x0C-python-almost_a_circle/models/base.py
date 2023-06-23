@@ -48,7 +48,7 @@ class Base:
             if cls.__name__ == "Square":
                 new = cls(1, 1)
             else:
-                new = cls(1, 1)
+                new = cls(1)
             new.update(**dictionary)
             return new
 
